@@ -15,9 +15,11 @@
 }
 
 .posts {
-    width: 50vw;
+    display: flex;
+    width: 60vw;
 }
 
 .infos {
-    width: 50vw;
+    display: flex;
+    width: 40vw;
 }
