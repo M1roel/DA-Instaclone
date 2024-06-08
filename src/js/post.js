@@ -8,8 +8,11 @@ function show() {
 
         document.getElementById('postcontainer').innerHTML += `
         <div>
-            <img src="${post['image']}">
+            <div class="authorinfo">
+            <img src="${post['authorimg']}" id="authorimg">
             <div>${post['author']}</div>
+            </div>
+            <img src="${post['image']}">
             <div>${post['description']}</div>
         </div>
         `;        

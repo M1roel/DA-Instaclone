@@ -5,18 +5,50 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato';
 }
 
 .content {
     display: flex;
     flex-direction: row;
     margin: 50px;
-    font-family: 'Lato';
+    width: calc(100% - 100px);
 }
 
 .posts {
     display: flex;
+    flex-direction: column;
     width: 60vw;
+    margin-right: 20px;
+}
+
+.postcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.postcontainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.authorinfo {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 10px #EDEDED;
+    padding: 5px
+}
+
+#authorimg {
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .infos {
