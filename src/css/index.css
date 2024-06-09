@@ -1,57 +1,70 @@
 @font-face {
-    font-family: 'Lato';
-    src: url(/src/fonts/Lato-Regular.ttf);
+  font-family: "Lato";
+  src: url(/src/fonts/Lato-Regular.ttf);
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Lato';
+  font-family: "Lato";
 }
 
 .content {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 20px 100px;
+}
+
+.post {
+  margin-bottom: 20px;
 }
 
 .posts {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.post img,
+.likes,
+.authorcomment,
+.comments,
+.date {
+  margin-bottom: 5px;
 }
 
 .postcontainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  font-size: 14px;
 }
 
 .postcontainer img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .authorinfo {
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-    box-shadow: 0px 2px 10px #EDEDED;
-    padding: 5px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  box-shadow: 0px 2px 10px #ededed;
+  padding: 5px;
 }
 
 #authorimg {
-    width: 48px;
-    border-radius: 50%;
-    margin-right: 20px;
+  width: 48px;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
 .infos {
-    display: flex;
-    width: 40vw;
+  display: flex;
+  width: 40vw;
 }
