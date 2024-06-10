@@ -1,22 +1,6 @@
 let data = [
   {
     authorimg: "../../public/img/Ich.jpg",
-    author: "summerbreez",
-    image: "../../public/img/img2.png",
-    description:
-      "Der Sommer wird heiß Leute! Sonne, Pool und Cocktails! Was brauchen wir da mehr?",
-    wholike: "vianna",
-    likes: "249",
-    comments: [
-      { poster: "peter", comment: "PARTY!" },
-      { poster: "kerstin", comment: "Ja, der Pool ist schon bereit!" },
-      { poster: "irene", comment: "Wir bringen die Cocktails mit :)" },
-      { poster: "vianna", comment: "Felix und ich kommen auch! :D" }
-    ],
-    date: "09.06.2024",
-  },
-  {
-    authorimg: "../../public/img/Ich.jpg",
     author: "tagesschau",
     image: "../../public/img/img1.png",
     description:
@@ -30,4 +14,21 @@ let data = [
     ],
     date: "09.06.2024",
   },
+  {
+    authorimg: "../../public/img/Ich.jpg",
+    author: "summerbreez",
+    image: "../../public/img/img2.png",
+    description:
+      "Der Sommer wird heiß Leute! Sonne, Pool und Cocktails! Was brauchen wir da mehr?",
+    wholike: "vianna",
+    likes: "249",
+    comments: [
+      { poster: "peter", comment: "PARTY!" },
+      { poster: "kerstin", comment: "Ja, der Pool ist schon bereit!" },
+      { poster: "irene", comment: "Wir bringen die Cocktails mit :)" },
+      { poster: "vianna", comment: "Felix und ich kommen auch! :D" }
+    ],
+    date: "09.06.2024",
+  }
+  
 ];

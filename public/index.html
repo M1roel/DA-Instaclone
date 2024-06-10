@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instafake</title>
     <script src="/src/js/w3c.js"></script>
     <script src="/src/js/data.js"></script>
     <script src="/src/js/post.js"></script>
-    <link rel="stylesheet" href="/src/css/index.css">
-</head>
+    <link rel="stylesheet" href="/src/css/index.css" />
+  </head>
 
-<body onload="includeHTML(); show();">
+  <body onload="includeHTML(); show();">
     <div w3-include-html="/src/templates/header.html"></div>
-    <section class="content">
+    <div class="main-container">
+      <section class="content">
         <div class="posts">
-            <div id="postcontainer" class="postcontainer">
-            </div>
+          <div id="postcontainer" class="postcontainer"></div>
         </div>
-        <div class="infos">
-            INFOS PLATZHALTER
-        </div>
-    </section>
-</body>
+      </section>
+      <aside class="infos">INFOS PLATZHALTER</aside>
+    </div>
+  </body>
 </html>

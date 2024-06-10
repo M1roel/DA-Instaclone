@@ -8,15 +8,31 @@
   padding: 0;
 }
 
-body {
+html, body {
+  height: 100%;
   font-family: "Lato";
 }
 
-.content {
+body {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
   padding: 20px 100px;
+  max-width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .post {
@@ -27,6 +43,10 @@ body {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
+}
+
+.post img {
+  width: 400px;
 }
 
 .post img,
@@ -41,7 +61,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  max-width: 100%;
+  width: 400px;
   font-size: 14px;
 }
 
@@ -65,6 +85,6 @@ body {
 }
 
 .infos {
-  display: flex;
-  width: 40vw;
+  width: 300px; /* Adjust as needed */
+  margin-left: 20px;
 }
