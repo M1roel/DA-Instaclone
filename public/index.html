@@ -11,14 +11,16 @@
   </head>
 
   <body onload="includeHTML(); show();">
-    <div w3-include-html="/src/templates/header.html"></div>
     <div class="main-container">
-      <section class="content">
-        <div class="posts">
+      <div w3-include-html="/src/templates/header.html"></div>
+      <div class="content">
+        <section class="posts">
           <div id="postcontainer" class="postcontainer"></div>
-        </div>
-      </section>
-      <aside class="infos">INFOS PLATZHALTER</aside>
+        </section>
+        <aside class="infos">
+            INFOS PLATZHALTER
+        </aside>
+      </div>
     </div>
   </body>
 </html>
