@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instafake</title>
@@ -8,19 +8,22 @@
     <script src="/src/js/data.js"></script>
     <script src="/src/js/post.js"></script>
     <link rel="stylesheet" href="/src/css/index.css" />
-  </head>
+</head>
 
-  <body onload="includeHTML(); show();">
+<body onload="includeHTML(); show();">
+    <!-- Hauptcontainer für den Inhalt der Seite -->
     <div class="main-container">
-      <div w3-include-html="/src/templates/header.html"></div>
-      <div class="content">
-        <section class="posts">
-          <div id="postcontainer" class="postcontainer"></div>
-        </section>
-        <aside class="infos">
-            INFOS PLATZHALTER
-        </aside>
-      </div>
+        <!-- Header einbinden -->
+        <div class="header" w3-include-html="/src/templates/header.html"></div>
+        <!-- Hauptinhalt der Seite -->
+        <div class="content">
+            <section class="posts">
+                <div id="postcontainer" class="postcontainer"></div>
+            </section>
+            <aside class="infos">
+                INFOS PLATZHALTER
+            </aside>
+        </div>
     </div>
-  </body>
+</body>
 </html>
