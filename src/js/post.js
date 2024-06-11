@@ -14,7 +14,7 @@ function generateStaticImagesHtml() {
   return `
     <div class="static-images-container">
         <div class="static-images-row">
-            <img src="${staticImages[0]}" class="static-image">
+            <img src="${staticImages[0]}" class="static-image" id="post-heart" onClick="toggleHeart">
             <img src="${staticImages[1]}" class="static-image">
             <img src="${staticImages[2]}" class="static-image">
         </div>
@@ -23,6 +23,11 @@ function generateStaticImagesHtml() {
         </div>
     </div>
   `;
+}
+
+/* Funktion um beim Klick auf das Herz das Image zu ändern */
+function toggleHeart() {
+    
 }
 
 /* Funktion um die Kommentare für die Posts zu rendern */
