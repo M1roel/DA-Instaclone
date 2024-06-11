@@ -1,5 +1,7 @@
+/* Daten der einzelnen Beiträge */
 let posts = data;
 
+/* Statische Icons unter dem Post Img */
 const staticImages = [
   "/public/img/heart.png",
   "/public/img/speech-bubble.png",
@@ -7,6 +9,7 @@ const staticImages = [
   "/public/img/favorite.png",
 ];
 
+/* Funktion um die statischen Icons zu rendern */
 function generateStaticImagesHtml() {
   return `
     <div class="static-images-container">
@@ -22,6 +25,7 @@ function generateStaticImagesHtml() {
   `;
 }
 
+/* Funktion um die Kommentare für die Posts zu rendern */
 function generateCommentsHtml(comments) {
   let commentsHtml = '';
   for (let i = 0; i < comments.length; i++) {
@@ -31,6 +35,7 @@ function generateCommentsHtml(comments) {
   return commentsHtml;
 }
 
+/* Funktion um die einzelnen Post-Container zu rendern */
 function generatePostContainer(post, commentsHtml, staticImagesHtml) {
   return `
     <div class="post">
@@ -48,6 +53,7 @@ function generatePostContainer(post, commentsHtml, staticImagesHtml) {
   `;
 }
 
+/* Funktion um den gesamten Post-Container zu rendern */
 function show() {
   document.getElementById("postcontainer").innerHTML = '';
 
