@@ -4,9 +4,9 @@ let data = [
     author: "tagesschau",
     image: "../../public/img/img1.png",
     description:
-      "Weiterhin starke Überschwemmungen in den Risikogebieten. Aber das THW ist bereits unterwegs und erste Helfer haben schon mit den Aufräumarbeiten begonnen",
+      "Weiterhin starke Überschwemmungen in den Risikogebieten. Aber das THW ist bereits unterwegs und erste Helfer haben schon mit den Aufräumarbeiten begonnen. Gefällt mir Angaben beziehen sich immer auf die Arbeit der Helfer!",
     wholike: "peter",
-    likes: "5",
+    likes: 5,
     comments: [
       { poster: "peter", comment: "Schlimm, was da passiert ist" },
       { poster: "anna", comment: "Ja, wirklich traurig" },
@@ -21,7 +21,7 @@ let data = [
     description:
       "Der Sommer wird heiß Leute! Sonne, Pool und Cocktails! Was brauchen wir da mehr?",
     wholike: "vianna",
-    likes: "249",
+    likes: 249,
     comments: [
       { poster: "peter", comment: "PARTY!" },
       { poster: "kerstin", comment: "Ja, der Pool ist schon bereit!" },
@@ -30,5 +30,4 @@ let data = [
     ],
     date: "09.06.2024",
   }
-  
 ];

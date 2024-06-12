@@ -30,9 +30,27 @@ function toggleHeart(index) {
     const postHeart = document.getElementById(`post-heart-${index}`);
     if (postHeart.src.includes("heart.png")) {
       postHeart.src = "/public/img/heart-red.png";
+      countUp(index);
     } else {
       postHeart.src = "/public/img/heart.png";
+      countDown(index);
     }
+}
+
+/* Funktion um die Likes zu erhöhen */
+function countUp(index) {
+  let likesElement = document.getElementById(`likes-${index}`);
+  let currentLikes = parseInt(likesElement.textContent.match(/\d+/)[0], 10);
+  likesElement.textContent = `Gefällt ${posts[index].wholike} und ${currentLikes + 1} weiteren Personen`;
+  posts[index].likes = currentLikes + 1;
+}
+
+/* Funktion um die Likes zu verringern */
+function countDown(index) {
+  let likesElement = document.getElementById(`likes-${index}`);
+  let currentLikes = parseInt(likesElement.textContent.match(/\d+/)[0], 10);
+  likesElement.textContent = `Gefällt ${posts[index].wholike} und ${currentLikes - 1} weiteren Personen`;
+  posts[index].likes = currentLikes - 1;
 }
 
 /* Funktion um die Kommentare für die Posts zu rendern */
@@ -46,7 +64,7 @@ function generateCommentsHtml(comments) {
 }
 
 /* Funktion um die einzelnen Post-Container zu rendern */
-function generatePostContainer(post, commentsHtml, staticImagesHtml) {
+function generatePostContainer(post, commentsHtml, staticImagesHtml, index) {
   return `
     <div class="post">
         <div class="authorinfo">
@@ -55,7 +73,7 @@ function generatePostContainer(post, commentsHtml, staticImagesHtml) {
         </div>
         <img src="${post.image}">
         ${staticImagesHtml}
-        <div class="likes">Gefällt ${post.wholike} und ${post.likes} weiteren Personen</div>
+        <div class="likes" id="likes-${index}">Gefällt ${post.wholike} und ${post.likes} weiteren Personen</div>
         <div class="authorcomment"><b>${post.author}</b> ${post.description}</div>
         <div class="comments">${commentsHtml}</div>
         <div class="date">${post.date}</div>
@@ -73,6 +91,6 @@ function show() {
     let commentsHtml = generateCommentsHtml(post.comments);
     let staticImagesHtml = generateStaticImagesHtml(i);
     
-    document.getElementById("postcontainer").innerHTML += generatePostContainer(post, commentsHtml, staticImagesHtml);
+    document.getElementById("postcontainer").innerHTML += generatePostContainer(post, commentsHtml, staticImagesHtml, i);
   }
 }
