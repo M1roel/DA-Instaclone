@@ -10,11 +10,11 @@ const staticImages = [
 ];
 
 /* Funktion um die statischen Icons zu rendern */
-function generateStaticImagesHtml() {
+function generateStaticImagesHtml(index) {
   return `
     <div class="static-images-container">
         <div class="static-images-row">
-            <img src="${staticImages[0]}" class="static-image" id="post-heart" onClick="toggleHeart">
+            <img src="${staticImages[0]}" class="static-image" id="post-heart-${index}" onClick="toggleHeart(${index})">
             <img src="${staticImages[1]}" class="static-image">
             <img src="${staticImages[2]}" class="static-image">
         </div>
@@ -26,8 +26,13 @@ function generateStaticImagesHtml() {
 }
 
 /* Funktion um beim Klick auf das Herz das Image zu ändern */
-function toggleHeart() {
-    
+function toggleHeart(index) {
+    const postHeart = document.getElementById(`post-heart-${index}`);
+    if (postHeart.src.includes("heart.png")) {
+      postHeart.src = "/public/img/heart-red.png";
+    } else {
+      postHeart.src = "/public/img/heart.png";
+    }
 }
 
 /* Funktion um die Kommentare für die Posts zu rendern */
@@ -66,7 +71,7 @@ function show() {
     const post = posts[i];
 
     let commentsHtml = generateCommentsHtml(post.comments);
-    let staticImagesHtml = generateStaticImagesHtml();
+    let staticImagesHtml = generateStaticImagesHtml(i);
     
     document.getElementById("postcontainer").innerHTML += generatePostContainer(post, commentsHtml, staticImagesHtml);
   }
