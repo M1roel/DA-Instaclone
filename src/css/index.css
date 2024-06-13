@@ -181,6 +181,10 @@ body {
   padding: 5px 0px;
 }
 
+.writepost input:focus {
+  outline: none;
+}
+
 .writepost button {
   border: none;
   color:blue;
