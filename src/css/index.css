@@ -20,6 +20,14 @@ body {
   padding: 0;
 }
 
+.d-none {
+  display: none;
+}
+
+.show-comments {
+  cursor: pointer;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;

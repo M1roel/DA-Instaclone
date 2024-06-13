@@ -90,13 +90,21 @@ function generatePostContainer(post, commentsHtml, staticImagesHtml, index) {
         ${staticImagesHtml}
         <div class="likes" id="likes-${index}">Gefällt ${post.wholike} und ${post.likes} weiteren Personen</div>
         <div class="authorcomment"><b>${post.author}</b> ${post.description}</div>
-        <div class="comments">${commentsHtml}</div>
+        <div class="show-comments" id="show-comments-${index}" onclick="showComments(${index})"><b>Kommentare anzeigen</b></div>
+        <div class="comments d-none" id="comments-${index}">${commentsHtml}</div>
         <div class="writepost">
           <input type="text" id="comment-input-${index}" placeholder="Kommentieren..." />
           <button onclick="postComment(${index})">Posten</button>
         </div>
     </div>
   `;
+}
+
+function showComments(index) {
+  const hide = document.getElementById(`show-comments-${index}`);
+  const show = document.getElementById(`comments-${index}`);
+  hide.classList.add('d-none');
+  show.classList.remove('d-none');
 }
 
 /* Funktion um den gesamten Post-Container zu rendern */
