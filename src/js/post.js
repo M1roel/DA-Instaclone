@@ -1,6 +1,9 @@
 /* Daten der einzelnen Beiträge */
 let posts = data;
 
+/* Zustände der angezeigten Kommentare */
+let commentsVisibleState = new Array(posts.length).fill(false);
+
 /* Statische Icons unter dem Post Img */
 const staticImages = [
   "/public/img/heart.png",
@@ -74,12 +77,15 @@ function postComment(index) {
   if (newComment) {
     posts[index].comments.push({ poster: "peter", comment: newComment });
     commentInput.value = "";
+    commentsVisibleState[index] = true;
     show();
   }
 }
 
 /* Funktion um die einzelnen Post-Container zu rendern */
 function generatePostContainer(post, commentsHtml, staticImagesHtml, index) {
+  const commentsVisibilityClass = commentsVisibleState[index] ? "" : "d-none";
+  const commentsToggleText = commentsVisibleState[index] ? "Kommentare ausblenden" : "Kommentare anzeigen";
   return `
     <div class="post">
         <div class="authorinfo">
@@ -90,8 +96,8 @@ function generatePostContainer(post, commentsHtml, staticImagesHtml, index) {
         ${staticImagesHtml}
         <div class="likes" id="likes-${index}">Gefällt ${post.wholike} und ${post.likes} weiteren Personen</div>
         <div class="authorcomment"><b>${post.author}</b> ${post.description}</div>
-        <div class="show-comments" id="show-comments-${index}" onclick="showComments(${index})"><b>Kommentare anzeigen</b></div>
-        <div class="comments d-none" id="comments-${index}">${commentsHtml}</div>
+        <div class="show-comments" id="show-comments-${index}" onclick="toggleComments(${index})"><b>${commentsToggleText}</b></div>
+        <div class="comments ${commentsVisibilityClass}" id="comments-${index}">${commentsHtml}</div>
         <div class="writepost">
           <input type="text" id="comment-input-${index}" placeholder="Kommentieren..." />
           <button onclick="postComment(${index})">Posten</button>
@@ -100,11 +106,10 @@ function generatePostContainer(post, commentsHtml, staticImagesHtml, index) {
   `;
 }
 
-function showComments(index) {
-  const hide = document.getElementById(`show-comments-${index}`);
-  const show = document.getElementById(`comments-${index}`);
-  hide.classList.add('d-none');
-  show.classList.remove('d-none');
+/* Funktion um den Zustand der Kommentar-Anzeige umzuschalten */
+function toggleComments(index) {
+  commentsVisibleState[index] = !commentsVisibleState[index];
+  show();
 }
 
 /* Funktion um den gesamten Post-Container zu rendern */
