@@ -83,7 +83,7 @@ function generatePostContainer(post, commentsHtml, staticImagesHtml, index) {
   return `
     <div class="post">
         <div class="authorinfo">
-            <img src="${post.authorimg}" id="authorimg">
+            <img src="${post.authorimg}" class="authorimg">
             <div>${post.author}</div>
         </div>
         <img src="${post.image}">

@@ -1,10 +1,10 @@
 let data = [
   {
-    authorimg: "../../public/img/Ich.jpg",
+    authorimg: "../../public/img/tageschaulogo.png",
     author: "tagesschau",
     image: "../../public/img/img1.png",
     description:
-      "Weiterhin starke Überschwemmungen in den Risikogebieten. Aber das THW ist bereits unterwegs und erste Helfer haben schon mit den Aufräumarbeiten begonnen. Gefällt mir Angaben beziehen sich immer auf die Arbeit der Helfer!",
+      "Gefällt mir Angaben beziehen sich immer auf die Arbeit der Helfer! Weiterhin starke Überschwemmungen in den Risikogebieten. Aber das THW ist bereits unterwegs und erste Helfer haben schon mit den Aufräumarbeiten begonnen.",
     wholike: "peter",
     likes: 5,
     comments: [
@@ -14,7 +14,7 @@ let data = [
     ]
   },
   {
-    authorimg: "../../public/img/Ich.jpg",
+    authorimg: "../../public/img/img2.png",
     author: "summerbreez",
     image: "../../public/img/img2.png",
     description:
