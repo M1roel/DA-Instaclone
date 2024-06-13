@@ -116,7 +116,7 @@ body {
 .authorcomment,
 .comments,
 .date {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .postcontainer {
@@ -169,4 +169,21 @@ body {
   width: 20px;
   margin: 5px;
   cursor: pointer;
+}
+
+.writepost {
+  display: flex;
+  justify-content: space-between;
+}
+
+.writepost input {
+  border: none;
+  padding: 5px 0px;
+}
+
+.writepost button {
+  border: none;
+  color:blue;
+  cursor: pointer;
+  padding: 5px 5px;
 }

@@ -76,7 +76,10 @@ function generatePostContainer(post, commentsHtml, staticImagesHtml, index) {
         <div class="likes" id="likes-${index}">Gefällt ${post.wholike} und ${post.likes} weiteren Personen</div>
         <div class="authorcomment"><b>${post.author}</b> ${post.description}</div>
         <div class="comments">${commentsHtml}</div>
-        <div class="date">${post.date}</div>
+        <div class="writepost">
+          <input type="text" placeholder="Kommentieren..." />
+          <button>Posten</button>
+        </div>
     </div>
   `;
 }
