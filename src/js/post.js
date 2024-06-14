@@ -123,12 +123,7 @@ function show() {
     let commentsHtml = generateCommentsHtml(post.comments);
     let staticImagesHtml = generateStaticImagesHtml(i);
 
-    document.getElementById("postcontainer").innerHTML += generatePostContainer(
-      post,
-      commentsHtml,
-      staticImagesHtml,
-      i
-    );
+    document.getElementById("postcontainer").innerHTML += generatePostContainer(post, commentsHtml, staticImagesHtml, i);
   }
 }
 
@@ -147,3 +142,4 @@ function load() {
 }
 
 load();
+show();
