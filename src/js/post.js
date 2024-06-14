@@ -79,6 +79,7 @@ function postComment(index) {
     commentInput.value = "";
     commentsVisibleState[index] = true;
     show();
+    save();
   }
 }
 
@@ -130,3 +131,19 @@ function show() {
     );
   }
 }
+
+/* Funktion zum speichern der Daten im lokalen Speicher */
+function save() {
+  let postsAsText = JSON.stringify(posts);
+  localStorage.setItem('posts', postsAsText);
+}
+
+/* Funktion zum laden der Daten aus dem lokalen Speicher */
+function load() {
+  let postsAsText = localStorage.getItem('posts');
+  if (postsAsText) {
+    posts = JSON.parse(postsAsText);
+  }
+}
+
+load();

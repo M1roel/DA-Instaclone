@@ -5,7 +5,7 @@ let data = [
     image: "../../public/img/img1.png",
     description:
       "Gefällt mir Angaben beziehen sich immer auf die Arbeit der Helfer! Weiterhin starke Überschwemmungen in den Risikogebieten. Aber das THW ist bereits unterwegs und erste Helfer haben schon mit den Aufräumarbeiten begonnen.",
-    wholike: "peter",
+    wholike: "maria",
     likes: 5,
     comments: [
       { poster: "peter", comment: "Schlimm, was da passiert ist" },
