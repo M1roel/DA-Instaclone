@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instafake</title>
@@ -8,22 +8,133 @@
     <script src="/src/js/data.js"></script>
     <script src="/src/js/post.js"></script>
     <link rel="stylesheet" href="/src/css/index.css" />
-</head>
+  </head>
 
-<body onload="includeHTML(); show();">
+  <body onload="includeHTML(); show();">
     <!-- Hauptcontainer für den Inhalt der Seite -->
     <div class="main-container">
-        <!-- Header einbinden -->
-        <div class="header" w3-include-html="/src/templates/header.html"></div>
-        <!-- Hauptinhalt der Seite -->
-        <div class="content">
-            <section class="posts">
-                <div id="postcontainer" class="postcontainer"></div>
-            </section>
-            <aside class="infos">
-                INFOS PLATZHALTER
-            </aside>
-        </div>
+      <!-- Header einbinden -->
+      <div class="header" w3-include-html="/src/templates/header.html"></div>
+      <!-- Hauptinhalt der Seite -->
+      <div class="content">
+        <section class="posts">
+          <div id="postcontainer" class="postcontainer"></div>
+        </section>
+        <aside class="infos">
+          <div class="creator-info">
+            <div class="creator-info-left">
+              <img
+                class="authorimg"
+                src="/public/img/Ich.jpg"
+                alt="benutzerbild"
+              />
+              <div class="creator-name">
+                <p>peter</p>
+                <p>Peter Pfautsch</p>
+              </div>
+            </div>
+            <div class="creator-info-right">
+              <div class="change">
+                <p>Wechseln</p>
+              </div>
+            </div>
+          </div>
+          <div class="suggestion">
+            <p>Vorschläge für dich</p>
+            <p>Alle ansehen</p>
+          </div>
+          <div class="creator-info">
+            <div class="creator-info-left">
+              <img
+                class="authorimg"
+                src="/public/img/ki_roboter.png"
+                alt="benutzerbild"
+              />
+              <div class="creator-name">
+                <p>mega_ki</p>
+                <p>KI Robot</p>
+              </div>
+            </div>
+            <div class="creator-info-right">
+              <div class="change">
+                <p>Abonnieren</p>
+              </div>
+            </div>
+          </div>
+          <div class="creator-info">
+            <div class="creator-info-left">
+              <img
+                class="authorimg"
+                src="/public/img/newyorktimes.png"
+                alt="benutzerbild"
+              />
+              <div class="creator-name">
+                <p>nyt</p>
+                <p>New York Times</p>
+              </div>
+            </div>
+            <div class="creator-info-right">
+              <div class="change">
+                <p>Abonnieren</p>
+              </div>
+            </div>
+          </div>
+          <div class="creator-info">
+            <div class="creator-info-left">
+              <img
+                class="authorimg"
+                src="/public/img/summer_island.png"
+                alt="benutzerbild"
+              />
+              <div class="creator-name">
+                <p>summer_island</p>
+                <p>Summer Island</p>
+              </div>
+            </div>
+            <div class="creator-info-right">
+              <div class="change">
+                <p>Abonnieren</p>
+              </div>
+            </div>
+          </div>
+          <div class="creator-info">
+            <div class="creator-info-left">
+              <img
+                class="authorimg"
+                src="/public/img/grinse_katze.png"
+                alt="benutzerbild"
+              />
+              <div class="creator-name">
+                <p>grinse_katze</p>
+                <p>Grinse Katze</p>
+              </div>
+            </div>
+            <div class="creator-info-right">
+              <div class="change">
+                <p>Abonnieren</p>
+              </div>
+            </div>
+          </div>
+          <div class="creator-info">
+            <div class="creator-info-left">
+              <img
+                class="authorimg"
+                src="/public/img/winter_beer.png"
+                alt="benutzerbild"
+              />
+              <div class="creator-name">
+                <p>winter_beer</p>
+                <p>Winter Beer Brewery</p>
+              </div>
+            </div>
+            <div class="creator-info-right">
+              <div class="change">
+                <p>Abonnieren</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
-</body>
+  </body>
 </html>

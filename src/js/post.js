@@ -142,4 +142,3 @@ function load() {
 }
 
 load();
-show();
