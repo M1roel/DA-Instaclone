@@ -11,7 +11,8 @@ let data = [
       { poster: "peter", comment: "Schlimm, was da passiert ist" },
       { poster: "anna", comment: "Ja, wirklich traurig" },
       { poster: "maria", comment: "Ich hoffe, es geht allen gut" },
-    ]
+    ],
+    date: '14.06.2024'
   },
   {
     authorimg: "../../public/img/img2.png",
@@ -26,6 +27,7 @@ let data = [
       { poster: "kerstin", comment: "Ja, der Pool ist schon bereit!" },
       { poster: "irene", comment: "Wir bringen die Cocktails mit :)" },
       { poster: "vianna", comment: "Felix und ich kommen auch! :D" }
-    ]
+    ],
+    date: '09.06.2024'
   }
 ];

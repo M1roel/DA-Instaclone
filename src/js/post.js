@@ -104,6 +104,7 @@ function generatePostContainer(post, commentsHtml, staticImagesHtml, index) {
         ${staticImagesHtml}
         <div class="likes" id="likes-${index}">Gefällt ${post.wholike} und ${post.likes} weiteren Personen</div>
         <div class="authorcomment"><b>${post.author}</b> ${post.description}</div>
+        <div class="date">${post.date}</div>
         <div class="show-comments" id="show-comments-${index}" onclick="toggleComments(${index})"><b>${commentsToggleText}</b></div>
         <div class="comments ${commentsVisibilityClass}" id="comments-${index}">${commentsHtml}</div>
         <div class="writepost">
