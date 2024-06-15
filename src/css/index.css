@@ -112,6 +112,18 @@ body {
   .infos {
     display: none !important;
   }
+
+  .posts {
+    justify-content: center !important;
+  }
+
+  .content {
+    padding: 0 20px !important;
+  }
+
+  .header-inner {
+    padding: 0 20px !important;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -220,6 +232,7 @@ body {
 .writepost {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .writepost input {

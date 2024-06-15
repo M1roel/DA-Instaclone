@@ -14,10 +14,11 @@ const staticImages = [
 
 /* Funktion um die statischen Icons zu rendern */
 function generateStaticImagesHtml(index) {
+  const heartIcon = posts[index].liked ? "/public/img/heart-red.png" : staticImages[0];
   return `
     <div class="static-images-container">
         <div class="static-images-row">
-            <img src="${staticImages[0]}" class="static-image" id="post-heart-${index}" onClick="toggleHeart(${index})">
+            <img src="${heartIcon}" class="static-image" id="post-heart-${index}" onClick="toggleHeart(${index})">
             <img src="${staticImages[1]}" class="static-image">
             <img src="${staticImages[2]}" class="static-image">
         </div>
@@ -38,6 +39,8 @@ function toggleHeart(index) {
     postHeart.src = "/public/img/heart.png";
     countDown(index);
   }
+  posts[index].liked = !posts[index].liked;
+  save();
 }
 
 /* Funktion um die Likes zu erhöhen */
@@ -127,13 +130,13 @@ function show() {
   }
 }
 
-/* Funktion zum speichern der Daten im lokalen Speicher */
+/* Funktion zum Speichern der Daten im lokalen Speicher */
 function save() {
   let postsAsText = JSON.stringify(posts);
   localStorage.setItem('posts', postsAsText);
 }
 
-/* Funktion zum laden der Daten aus dem lokalen Speicher */
+/* Funktion zum Laden der Daten aus dem lokalen Speicher */
 function load() {
   let postsAsText = localStorage.getItem('posts');
   if (postsAsText) {
@@ -141,4 +144,5 @@ function load() {
   }
 }
 
+/* Initialisieren der Anwendung */
 load();
