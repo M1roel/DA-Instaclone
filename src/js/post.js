@@ -14,7 +14,9 @@ const staticImages = [
 
 /* Funktion um die statischen Icons zu rendern */
 function generateStaticImagesHtml(index) {
-  const heartIcon = posts[index].liked ? "/public/img/heart-red.png" : staticImages[0];
+  const heartIcon = posts[index].liked
+    ? "/public/img/heart-red.png"
+    : staticImages[0];
   return `
     <div class="static-images-container">
         <div class="static-images-row">
@@ -89,7 +91,9 @@ function postComment(index) {
 /* Funktion um die einzelnen Post-Container zu rendern */
 function generatePostContainer(post, commentsHtml, staticImagesHtml, index) {
   const commentsVisibilityClass = commentsVisibleState[index] ? "" : "d-none";
-  const commentsToggleText = commentsVisibleState[index] ? "Kommentare ausblenden" : "Kommentare anzeigen";
+  const commentsToggleText = commentsVisibleState[index]
+    ? "Kommentare ausblenden"
+    : "Kommentare anzeigen";
   return `
     <div class="post">
         <div class="authorinfo">
@@ -133,12 +137,12 @@ function show() {
 /* Funktion zum Speichern der Daten im lokalen Speicher */
 function save() {
   let postsAsText = JSON.stringify(posts);
-  localStorage.setItem('posts', postsAsText);
+  localStorage.setItem("posts", postsAsText);
 }
 
 /* Funktion zum Laden der Daten aus dem lokalen Speicher */
 function load() {
-  let postsAsText = localStorage.getItem('posts');
+  let postsAsText = localStorage.getItem("posts");
   if (postsAsText) {
     posts = JSON.parse(postsAsText);
   }
